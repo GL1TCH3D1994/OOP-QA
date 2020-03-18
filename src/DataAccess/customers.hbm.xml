@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC
+	"-//HIbernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="DataAccess.Customers" table="customers" >
+	
+		<id name="CustomerNumber" type="int">
+			<column name="CustomerNumber" length="10" not-null="true" />
+			<generator class="assigned" />
+		</id>
+		
+		<property name="CustomerName" >
+			<column name="CustomerName" length="10" not-null="true" />
+		</property>
+		
+		<property name="AddressLine1" >
+			<column name="AddressLine1" length="10" not-null="true" />
+		</property>
+		
+		<property name="AddressLine2" >
+			<column name="AddressLine2" length="10" not-null="true" />
+		</property>
+		
+		<property name="AddressLine3" >
+			<column name="AddressLine3" length="10" not-null="true" />
+		</property>
+		
+		<property name="Postcode" >
+			<column name="Postcode" length="10" not-null="true" />
+		</property>
+		
+		<property name="Phone" >
+			<column name="Phone" length="10" not-null="true" />
+		</property>
+		
+		<property name="Email" >
+			<column name="Email" length="10" not-null="true" />
+		</property>
+		
+		<property name="SecurityQuestion" >
+			<column name="SecurityQuestion" length="10" not-null="true" />
+		</property>
+		
+		<property name="SecurityQuestionAnswer" >
+			<column name="SecurityQuestionAnswer" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+			
+			

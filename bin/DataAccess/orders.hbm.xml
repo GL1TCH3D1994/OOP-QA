@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC
+	"-//HIbernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="DataAccess.Orders" table="orders" >
+	
+		<id name="OrderNumber" >
+			<column name="OrderNumber" length="10" not-null="true" />
+			<generator class="assigned" />
+		</id>
+		
+		<property name="CustomerNumber" >
+			<column name="CustomerNumber" length="10" not-null="true" />
+		</property>
+		
+		<property name="OrderDate" type="java.util.Date">
+			<column name="OrderDate" length="10" not-null="true" />
+		</property>
+		
+		<property name="OrderTotal" >
+			<column name="OrderTotal" length="10" not-null="true" />
+		</property>
+		
+		<property name="OrderStatus" type="boolean">
+			<column name="OrderStatus" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+			
+			

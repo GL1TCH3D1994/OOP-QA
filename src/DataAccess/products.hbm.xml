@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-mapping PUBLIC
+	"-//HIbernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="DataAccess.Products" table="products" >
+	
+		<id name="ProductNumber" >
+			<column name="ProductNumber" length="10" not-null="true" />
+			<generator class="assigned" />
+		</id>
+		
+		<property name="ProductName" >
+			<column name="ProductName" length="100" not-null="true" />
+		</property>
+		
+		<property name="Description" >
+			<column name="Description" length="1000" not-null="true" />
+		</property>
+		
+		<property name="RRP" >
+			<column name="RRP" length="10" not-null="true" />
+		</property>
+		
+		<property name="ProductType" >
+			<column name="ProductType" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+			
+			
